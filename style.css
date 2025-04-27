@@ -171,6 +171,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, .2);
     margin: 0;
     padding-top: 15px;
+    margin: 0 70px;
     font-size: .875rem;
     text-align: center;
     color: rgba(255, 255, 255, .6);
@@ -195,5 +196,9 @@ footer {
     .footer-cols {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .footer-copy {
+        margin: 0;
     }
 }
