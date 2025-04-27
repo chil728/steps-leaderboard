@@ -78,7 +78,10 @@ body {
     border-radius: 12px;
 }
 
-/* TABLE – unified 1‑px dividers */
+.table-responsive {
+    border-radius: 15px;
+}
+
 .table {
     border-collapse: collapse;
     table-layout: fixed;
@@ -92,13 +95,18 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, .06);
 }
 
+.table tbody {
+    position: relative;
+}
+
 .table tbody tr {
+    margin: 0 20px;
     border-width: 1px !important;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .table tbody td {
     padding: 12px;
-    /* border-bottom: 1px solid rgba(0, 0, 0, .06); */
     border: none;
 }
 
