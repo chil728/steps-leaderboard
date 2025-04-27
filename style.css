@@ -142,7 +142,7 @@ footer {
 
 /* Links in contact */
 .footer-col.contact a {
-    /* width: fit-content; */
+    width: fit-content;
     display: flex;
     align-items: center;
     text-decoration: none;
