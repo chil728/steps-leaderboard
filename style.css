@@ -1,17 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/* ===============================================
+   EELC2010 – 30-Day Steps Leaderboard
+   =============================================== */
+@import url("https://fonts.googleapis.com/css2?family=Sansation:wght@300;400;700&display=swap");
 
-/* ----------------- Global ----------------- */
-body {
-    background-color: #f0f4f8;
-    color: #2e3a59;
-    font-family: 'Sansation', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
+/* ---------- Variables ---------- */
+:root {
+    --primary-bg: #f0f4f8;
+    --primary-text: #2e3a59;
+    --accent-red: #ff6b6b;
+    --gold: #ffd700;
+    --silver: #c0c0c0;
+    --bronze: #cd7f32;
 }
 
-/* ----------------- Navbar ----------------- */
+/* ---------- Global ---------- */
+body {
+    margin: 0;
+    background: var(--primary-bg);
+    color: var(--primary-text);
+    font-family: 'Sansation', Tahoma, sans-serif;
+}
+
+/* ---------- Navbar ---------- */
 .navbar {
-    background-color: #2e3a59;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--primary-text);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
 }
 
 .navbar-brand {
@@ -21,12 +34,17 @@ body {
 }
 
 .nav-icon {
-    color: #fff;
     margin-left: 1rem;
+    padding: 8px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: .25s;
 }
 
 .nav-icon:hover {
-    color: #ffe199;
+    background: #fff;
+    color: var(--primary-text);
 }
 
 .nav-logo {
@@ -34,21 +52,13 @@ body {
     border-radius: 50%;
 }
 
-/* ----------------- Hero ----------------- */
+/* ---------- Hero ---------- */
 .header {
-    position: relative;
-    color: #2e3a59;
+    color: var(--primary-text);
 }
 
-.header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-}
-
-.header .overlay-content {
-    position: relative;
-    padding: 80px 20px 0;
+.overlay-content {
+    padding: 80px 20px 40px;
     text-align: center;
 }
 
@@ -58,26 +68,190 @@ body {
     letter-spacing: 1px;
 }
 
-.header p.lead {
-    font-size: 1.2rem;
-    margin-top: .5rem;
-}
-
 .header i.fa-trophy {
     color: #ffef00;
     margin-bottom: .5rem;
 }
 
-/* ----------------- Leaderboard Card ----------------- */
+/* ---------- Podium ---------- */
+.podium {
+    gap: 1rem;
+}
+
+.podium-place {
+    width: 110px;
+    position: relative;
+    animation: rise .9s cubic-bezier(.25, .8, .4, 1.25) backwards;
+}
+
+.place-2 {
+    height: 200px;
+    order: 1;
+    animation-delay: .05s;
+}
+
+.place-1 {
+    height: 240px;
+    order: 2;
+    animation-delay: .15s;
+}
+
+.place-3 {
+    height: 160px;
+    order: 3;
+    animation-delay: .25s;
+}
+
+/* Plinths */
+.podium-place::before {
+    content: '';
+    position: absolute;
+    inset: auto 0 0;
+    height: 100%;
+    border-radius: 12px 12px 0 0;
+    z-index: -1;
+}
+
+.place-1::before {
+    background: var(--gold);
+}
+
+.place-2::before {
+    background: var(--silver);
+}
+
+.place-3::before {
+    background: var(--bronze);
+}
+
+/* Avatar */
+.avatar-wrap {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 20px auto;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+    transition: all 0.4s ease;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-wrap:hover {
+    transform: translateY(-40px);
+}
+
+/* Medal badge inside avatar-wrap */
+.rank-badge {
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: .35rem .6rem;
+    border-radius: 50rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+}
+
+.medal-gold i {
+    color: var(--gold);
+}
+
+.medal-silver i {
+    color: var(--silver);
+}
+
+.medal-bronze i {
+    color: var(--bronze);
+}
+
+.rank-badge i {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* Crown overlay */
+.crown::after {
+    content: url('./images/crown.svg');
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    pointer-events: none;
+}
+
+/* Info (name + steps) pinned at bottom of plinth */
+.info {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.name {
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.steps {
+    margin: 0;
+    font-size: .8rem;
+}
+
+/* Animation */
+@keyframes rise {
+    0% {
+        transform: translateY(70px) scale(.92);
+        opacity: 0
+    }
+
+    80% {
+        transform: translateY(-5px) scale(1.03);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .podium-place {
+        animation: none;
+    }
+}
+
+/* ---------- Leaderboard table ---------- */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .card {
+    max-width: 800px;
     border: none;
     border-radius: 15px;
 }
 
 .table {
+    margin: 0;
     border-collapse: collapse;
     table-layout: fixed;
-    margin: 0;
     border-radius: 15px;
 }
 
@@ -86,47 +260,26 @@ body {
 }
 
 .table thead th {
-    background: #ff6b6b;
-    color: #fff;
-    font-weight: 600;
     padding: 12px;
-}
-
-.table thead tr,
-.table tbody tr {
-    margin: 0 20px;
-    border-width: 1px !important;
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+    font-weight: 600;
+    background: var(--accent-red);
+    color: #fff;
 }
 
 .table tbody td {
-    padding: 12px;
+    padding: 20px 10px;
     border: none;
 }
 
-/* reconnect header/body */
 .table tbody tr:hover td {
     background: rgba(255, 255, 255, .1);
 }
 
-/* highlights */
-.table tbody tr.top1 td {
-    background: rgba(255, 107, 107, .15);
-}
-
-.table tbody tr.top2 td {
-    background: rgba(46, 58, 89, .07);
-}
-
-.table tbody tr.top3 td {
-    background: rgba(46, 143, 224, .08);
-}
-
-/* ----------------- Footer ----------------- */
+/* ---------- Footer ---------- */
 footer {
-    background: #2e3a59;
-    color: #fff;
     padding: 40px 20px;
+    background: var(--primary-text);
+    color: #fff;
 }
 
 .footer-cols {
@@ -142,23 +295,23 @@ footer {
 }
 
 .footer-col h2 {
-    font-size: 2rem;
     margin-bottom: .75rem;
-    color: #fff;
+    font-size: 2rem;
 }
 
 .footer-col.contact a {
     display: flex;
     align-items: center;
     gap: .5rem;
-    color: #fff;
-    text-decoration: none;
     margin-bottom: .5rem;
     font-size: .9rem;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity .25s;
 }
 
 .footer-col.contact a:hover {
-    color: #ffe199;
+    opacity: .6;
 }
 
 .footer-col.about p {
@@ -168,32 +321,33 @@ footer {
 }
 
 .footer-copy {
-    border-top: 1px solid rgba(255, 255, 255, .2);
     margin: 0;
-    padding-top: 20px;
+    padding-top: 40px;
     font-size: .875rem;
     text-align: center;
     color: rgba(255, 255, 255, .6);
+    border-top: 1px solid rgba(255, 255, 255, .2);
 }
 
-/* -------- Responsive tweaks ---------- */
+/* ---------- Responsive ---------- */
 @media(max-width:768px) {
-    .header {
-        min-height: 200px;
-    }
-
     .header h1 {
         font-size: 1.8rem;
     }
 
     .table thead th,
     .table tbody td {
-        padding: 10px;
         font-size: .9rem;
     }
 
     .footer-cols {
         flex-direction: column;
         gap: 20px;
+    }
+}
+
+@media(max-width:576px) {
+    .podium-place {
+        width: 90px;
     }
 }
