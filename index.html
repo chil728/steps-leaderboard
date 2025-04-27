@@ -1,79 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>30-Day Average Steps Leaderboard</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="style.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container justify-content-between">
-            <a class="navbar-brand" href="#">Walking</a>
-            <div class="d-flex align-items-center">
-                <a class="nav-link nav-icon" href="https://docs.google.com/spreadsheets/d/1-ViZoeLI4ZyX4WygkeAjwWK32XRpHIU0GeWXXnljWKo/edit?usp=sharing" target="_blank" title="Dashboard">
-                    <i class="fa-regular fa-file fa-lg"></i>
-                </a>
-                <a class="nav-link nav-icon" href="#" target="_blank" title="Instagram">
-                    <i class="fa-brands fa-instagram fa-xl"></i>
-                </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>30-Day Average Steps Leaderboard</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Font Awesome -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <!-- Custom CSS -->
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container justify-content-between">
+                <a class="navbar-brand" href="#">Walking</a>
+                <div class="d-flex align-items-center">
+                    <a
+                        class="nav-link nav-icon"
+                        href="https://docs.google.com/spreadsheets/d/1-ViZoeLI4ZyX4WygkeAjwWK32XRpHIU0GeWXXnljWKo/edit?usp=sharing"
+                        target="_blank"
+                        title="Dashboard"
+                    >
+                        <i class="fa-regular fa-file fa-lg"></i>
+                    </a>
+                    <a
+                        class="nav-link nav-icon"
+                        href="#"
+                        target="_blank"
+                        title="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Hero Section -->
-    <section class="header">
-        <div class="overlay-content">
-            <i class="fas fa-trophy fa-3x"></i>
-            <h1>30-Day Average Steps Leaderboard</h1>
-            <p class="lead">Who's leading the step challenge?</p>
-        </div>
-    </section>
+        <!-- Hero Section -->
+        <section class="header">
+            <div class="overlay-content">
+                <i class="fas fa-trophy fa-3x"></i>
+                <h1>30-Day Average Steps Leaderboard</h1>
+                <p class="lead">Who's leading the step challenge?</p>
+            </div>
+        </section>
 
-    <!-- Leaderboard -->
-    <div class="container my-5">
-        <div class="card shadow-sm">
-            <div class="card-body p-0">
-                <div class="table-responsive">
-                    <table class="table table-hover align-middle mb-0">
-                        <thead>
-                            <tr>
-                                <th scope="col" class="text-center">Rank</th>
-                                <th scope="col">Participant</th>
-                                <th scope="col" class="text-center">Avg Steps</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
+        <!-- Leaderboard -->
+        <div class="container my-5">
+            <div class="card shadow-sm">
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-center">
+                                        Rank
+                                    </th>
+                                    <th scope="col">Participant</th>
+                                    <th scope="col" class="text-center">
+                                        Avg Steps
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Footer -->
-    <footer class="text-center py-4">
-        <div class="social">
-            <h1>Contact Us</h1>
-            <a href="mailto:healthwalking882@gmail.com" class="text-white" title="Email">
-                <i class="fa-regular fa-envelope fa-lg"></i>
-                healthwalking882@gmail.com
-            </a>
-            <a href="https://www.instagram.com/um_eelc_healthwalking/" target="_blank" class="text-white" title="Instagram">
-                <i class="fa-brands fa-instagram fa-lg"></i> um_eelc_healthwalking
-            </a>
-        </div>
-        <p>University of Macau EELC2010 Healthy Walking &copy; 2025. All rights reserved.</p>
-    </footer>
+        <footer>
+            <div class="footer-cols container">
+                <!-- Contact column -->
+                <div class="footer-col contact">
+                    <h2>Contact</h2>
+                    <a href="mailto:healthwalking882@gmail.com" title="Email">
+                        <i class="fa-regular fa-envelope"></i>
+                        healthwalking882@gmail.com
+                    </a>
+                    <a
+                        href="https://www.instagram.com/um_eelc_healthwalking/"
+                        target="_blank"
+                        title="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                        @um_eelc_healthwalking
+                    </a>
+                </div>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
-</body>
+                <!-- About column -->
+                <div class="footer-col about">
+                    <h2>About</h2>
+                    <p>
+                        This 30-Day Healthy Walking challenge is organized by
+                        the University of Macau’s EELC2010 course to promote
+                        daily activity and community spirit among students.
+                    </p>
+                </div>
+
+                <!-- (Add more columns here if you like) -->
+            </div>
+
+            <!-- Separator line + copyright -->
+            <p class="footer-copy">
+                © 2025 University of Macau EELC2010 Healthy Walking. All rights
+                reserved.
+            </p>
+        </footer>
+
+        <!-- Bootstrap JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Custom JS -->
+        <script src="script.js"></script>
+    </body>
 </html>
