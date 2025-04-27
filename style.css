@@ -1,4 +1,4 @@
-/* style.css - updated to hide avatars */
+/* style.css - updated footer social links styling */
 
 /* Base Styling */
 body {
@@ -105,11 +105,48 @@ body {
     background-color: rgba(46, 143, 224, 0.1);
 }
 
+/* Hide avatars */
+.avatar {
+    display: none;
+}
+
 /* Footer */
 footer {
     background-color: #2e3a59;
     color: #ffffff;
-    padding: 1rem 0;
+    padding: 40px;
+}
+
+footer .social {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding-bottom: 2rem;
+}
+
+footer .social h1 {
+    text-align: left;
+}
+
+footer .social a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+footer .social a:hover {
+    color: #ff6b6b;
+}
+
+footer p {
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid #FFF;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 /* Responsive Adjustments */
@@ -123,8 +160,12 @@ footer {
     }
 
     .table thead th,
-    .n.table tbody td {
+    .table tbody td {
         padding: 8px;
         font-size: 0.9rem;
+    }
+
+    footer .social {
+        
     }
 }
