@@ -21,16 +21,12 @@ body {
 }
 
 .navbar-brand:hover {
-    color: #ff6b6b;
+    color: #ffe199;
 }
 
 .nav-icon {
     color: #fff;
     margin-left: 1rem;
-}
-
-.nav-icon:hover {
-    color: #ff6b6b;
 }
 
 .nav-logo {
