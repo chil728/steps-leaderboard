@@ -1,10 +1,10 @@
-/* style.css – unified table dividers & minor refinements */
+@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 /* ----------------- Global ----------------- */
 body {
     background-color: #f0f4f8;
     color: #2e3a59;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Sansation', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
 }
 
