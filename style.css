@@ -20,6 +20,11 @@ body {
     font-size: 1.5rem;
 }
 
+.nav-logo {
+    width: 50px;
+    border-radius: 50%;
+}
+
 .navbar-brand:hover {
     color: #ff6b6b;
 }
