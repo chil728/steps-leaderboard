@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tr.innerHTML = `
         <td class="text-center">${medal}</td>
         <td class="d-flex align-items-center">${item.participant}</td>
-        <td class="text-center">${item.average.toLocaleString()}</td>
+        <td class="">${item.average.toLocaleString()}</td>
       `;
         tbody.appendChild(tr);
     });
