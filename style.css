@@ -75,16 +75,18 @@ body {
 /* ----------------- Leaderboard Card ----------------- */
 .card {
     border: none;
-    border-radius: 12px;
-}
-
-.table-responsive {
     border-radius: 15px;
 }
 
 .table {
     border-collapse: collapse;
     table-layout: fixed;
+    margin: 0;
+    border-radius: 15px;
+}
+
+.table-responsive {
+    border-radius: 15px;
 }
 
 .table thead th {
@@ -92,13 +94,9 @@ body {
     color: #fff;
     font-weight: 600;
     padding: 12px;
-    border-bottom: 1px solid rgba(0, 0, 0, .06);
 }
 
-.table tbody {
-    position: relative;
-}
-
+.table thead tr,
 .table tbody tr {
     margin: 0 20px;
     border-width: 1px !important;
