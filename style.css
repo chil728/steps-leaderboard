@@ -1,0 +1,130 @@
+/* style.css - updated to hide avatars */
+
+/* Base Styling */
+body {
+    background-color: #f0f4f8;
+    color: #2e3a59;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2e3a59;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+    color: #ff6b6b;
+}
+
+.nav-icon {
+    color: #ffffff;
+    margin-left: 1rem;
+}
+
+.nav-icon:hover {
+    color: #ff6b6b;
+}
+
+/* Hero Section */
+.header {
+    position: relative;
+    background-image: url('https://source.unsplash.com/1600x400/?nature,walking');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    color: #ffffff;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(46, 58, 89, 0.7);
+}
+
+.header .overlay-content {
+    position: relative;
+    padding: 80px 15px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.header p.lead {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.header i.fa-trophy {
+    color: #ff6b6b;
+    margin-bottom: 0.5rem;
+}
+
+/* Leaderboard Table */
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+.table thead th {
+    background-color: #ff6b6b;
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.table tbody tr {
+    transition: background-color 0.3s;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(255, 107, 107, 0.1);
+}
+
+.table tbody tr.top1 {
+    background-color: rgba(255, 107, 107, 0.2);
+}
+
+.table tbody tr.top2 {
+    background-color: rgba(46, 58, 89, 0.1);
+}
+
+.table tbody tr.top3 {
+    background-color: rgba(46, 143, 224, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #2e3a59;
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header {
+        min-height: 200px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .table thead th,
+    .n.table tbody td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
